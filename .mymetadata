@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SigningSystem"
+  id="myeclipse.1493975217142"
+  context-root="/SigningSystem"
+  j2ee-spec="5.0"
+  archive="SigningSystem.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

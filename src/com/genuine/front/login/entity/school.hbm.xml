@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.genuine.front.login.entity.School" table="t_school">
+		<id name="s_Id" type="java.lang.String">
+			<column name="s_id" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="s_Name" type="java.lang.String">
+			<column name="s_name" length="20" not-null="true" />
+		</property>
+		<!-- 密码6-15 位 -->
+		<property name="s_Password" type="java.lang.String">
+			<column name="s_password" length="15" not-null="true" />
+		</property>
+		<property name="s_City" type="java.lang.String">
+			<column name="s_city" length="3" not-null="true" />
+		</property>
+		<property name="s_Dept" type="java.lang.String">
+			<column name="s_dept" length="12" not-null="true" />
+		</property>
+		<property name="s_Type" type="java.lang.String">
+			<column name="s_type" length="4" not-null="true" />
+		</property>
+		<property name="s_Admin" type="java.lang.String">
+			<column name="s_admin" length="2" not-null="true" />
+		</property>
+		<property name="s_Manage" type="java.lang.String">
+			<column name="s_manage" length="5"/>
+		</property>
+		<property name="s_Address" type="java.lang.String">
+			<column name="s_address" length="12"/>
+		</property>
+		<property name="s_75" type="java.lang.String">
+			<column name="s_75" length="20"/>
+		</property>
+		<property name="s_Submit" type="java.lang.String">
+			<column name="s_Submit" length="20"/>
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="sheet" namespace="/sheet" extends="struts-default">
+		<action name="sheet_*" class="com.genuine.front.sheet.action.SheetAction" method="{1}">
+			<result name="{1}">/WEB-INF/jsp/front/sheet/{1}.jsp</result>
+			<result name="importOneExcel">/WEB-INF/jsp/front/sheet/sheetOne.jsp</result>
+			<result name="importTwoExcel">/WEB-INF/jsp/front/sheet/sheetTwo.jsp</result>
+			<result name="importThreeExcel">/WEB-INF/jsp/front/sheet/sheetThree.jsp</result>
+			<result name="importFourExcel">/WEB-INF/jsp/front/sheet/sheetFour.jsp</result>
+			<result name="importFiveExcel">/WEB-INF/jsp/front/sheet/sheetFive.jsp</result>
+			<result name="doSubmitOne">/WEB-INF/jsp/front/sheet/sheetOne.jsp</result>
+			<result name="doSubmitTwo">/WEB-INF/jsp/front/sheet/sheetTwo.jsp</result>
+			<result name="doSubmitThree">/WEB-INF/jsp/front/sheet/sheetThree.jsp</result>
+			<result name="doSubmitFour">/WEB-INF/jsp/front/sheet/sheetFour.jsp</result>
+			<result name="doSubmitFive">/WEB-INF/jsp/front/sheet/sheetFive.jsp</result>
+		</action>
+		
+		<!-- 配置文件下载 -->
+		<action name="down_*" class="com.genuine.front.sheet.action.SheetAction" method="{1}">
+			<!-- 文件下载结果配置 -->
+			<result	name="{1}" type="stream">
+			 	 <!--  往StreamResult类中的属性注入内容 -->
+				 <!-- 返回给浏览器的文件类型。返回通用的二进制 -->
+				 <param name="contentType">application/octet-stream</param>
+				 <!-- 返回给浏览器的输入流 -->
+				 <param name="inputName">inputStream</param>
+				 <!--  告诉浏览器的方式下载资源
+				 ${name}: 获取Action中的getName()方法的数据
+				 -->
+				 <param name="contentDisposition">attachment;filename=${fileName}</param>
+				 <!-- 缓存大小 -->
+				 <param name="bufferSize">1024</param>
+			</result>
+		</action>
+	</package>
+
+</struts>

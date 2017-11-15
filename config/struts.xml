@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<!-- 初始化配置项 -->
+	<!-- 禁用动态方法访问 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <!-- 配置成开发模式 -->
+    <constant name="struts.devMode" value="true" />
+    <!-- 把主题配置成simple -->
+    <constant name="struts.ui.theme" value="simple" />
+    <!-- 配置拓展名为action -->
+	<constant name="struts.action.extension" value="action" />
+	
+	<include file="com/genuine/core/index/conf/index-struts.xml"/>
+	<include file="com/genuine/front/login/conf/school-struts.xml"/>
+	<include file="com/genuine/admin/customer/conf/customer-struts.xml"/>
+	<include file="com/genuine/admin/user/conf/admin-struts.xml"/>
+	<include file="com/genuine/front/sheet/conf/sheet-struts.xml"/>
+	<include file="com/genuine/admin/caculate/all/conf/all-struts.xml"/>
+	<include file="com/genuine/admin/caculate/group/conf/group-struts.xml"/>
+	<include file="com/genuine/admin/cleardb/conf/cleardb-struts.xml"/>
+</struts>
